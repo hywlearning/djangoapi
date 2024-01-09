@@ -1,0 +1,6 @@
+bleach
+django
+djangorestframework
+djangorestframework-jwt
+djangorestframework-simplejwt
+mysqlclient
