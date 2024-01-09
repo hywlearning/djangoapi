@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  api:
+    image: hywlearning/shopapp
+    ports:
+      - "7000:7000"
+    depends_on:
+      - mysql
+    environment:
+      DJANGO_DB_HOST: mysql
+      DJANGO_DB_PORT: 3306
+      DJANGO_DB_NAME: db_shop
+      DJANGO_DB_USER: root
+      DJANGO_DB_PASSWORD: gnoliew  
+  mysql:
+    image: hywlearning/mysql
+    restart: always
+
